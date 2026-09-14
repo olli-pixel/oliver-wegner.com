@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Oliver Wegner, founder, product and customer lead. Co-founder and CPO of cofenster, Berlin.">
+<link rel="canonical" href="https://oliver-wegner.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oliver Wegner">
+<meta property="og:description" content="Founder, product and customer lead. Co-founder and CPO of cofenster, Berlin.">
+<meta property="og:url" content="https://oliver-wegner.com/">
+<meta property="og:image" content="https://oliver-wegner.com/portrait.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23151715'/%3E%3Ccircle cx='16' cy='16' r='7.5' fill='none' stroke='%23ECEDE8' stroke-width='3'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ECEDEA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141512" media="(prefers-color-scheme: dark)">
+<title>Oliver Wegner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #ECEDEA;
+    --surface: #F5F5F2;
+    --ink: #151715;
+    --ink-2: #474B47;
+    --muted: #767B76;
+    --rule: #CFD2CC;
+    --rule-soft: #DDDFDA;
+    --accent: #3729B9;
+    --accent-ink: #FFFFFF;
+    --focus: #3729B9;
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141512;
+      --surface: #1C1E1B;
+      --ink: #ECEDE8;
+      --ink-2: #C3C6BF;
+      --muted: #8B908A;
+      --rule: #2F322D;
+      --rule-soft: #262924;
+      --accent: #A49CFF;
+      --accent-ink: #141512;
+      --focus: #A49CFF;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141512;
+    --surface: #1C1E1B;
+    --ink: #ECEDE8;
+    --ink-2: #C3C6BF;
+    --muted: #8B908A;
+    --rule: #2F322D;
+    --rule-soft: #262924;
+    --accent: #A49CFF;
+    --accent-ink: #141512;
+    --focus: #A49CFF;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+  p { margin: 0; }
+  h1, h2, h3 { margin: 0; font-weight: 500; text-wrap: balance; }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 5vw, 64px);
+    padding-block: clamp(28px, 4vw, 48px) 40px;
+  }
+
+  /* top bar */
+  .top {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    font-size: 14px; color: var(--muted);
+    padding-bottom: clamp(48px, 8vw, 96px);
+  }
+  .top .name { color: var(--ink); font-weight: 500; letter-spacing: .01em; }
+  .top nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  .top nav a { color: var(--muted); }
+  .top nav a:hover { color: var(--ink); }
+
+  /* hero */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+    padding-bottom: clamp(56px, 8vw, 104px);
+  }
+  .hero h1 {
+    font-size: clamp(40px, 6.2vw, 66px);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+  .hero .role {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.25;
+    color: var(--ink-2);
+    margin-top: 14px;
+    letter-spacing: -0.005em;
+  }
+  .hero .lede {
+    margin-top: 28px;
+    max-width: 34em;
+    font-size: clamp(17px, 1.6vw, 19px);
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font: 500 14px/1 var(--sans);
+    letter-spacing: .01em;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    background: transparent;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .btn:hover { border-color: var(--ink); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn.primary:hover { filter: brightness(1.08); }
+  .btn svg { width: 14px; height: 14px; }
+
+  .portrait {
+    margin: 0;
+    aspect-ratio: 720 / 991;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  /* sections: label rail + content */
+  section {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 24px clamp(24px, 4vw, 64px);
+    border-top: 1px solid var(--rule);
+    padding-block: clamp(36px, 5vw, 56px);
+  }
+  section > h2 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+    color: var(--ink);
+    padding-top: 4px;
+  }
+  .content { display: grid; gap: 22px; max-width: 42em; }
+  .content p { color: var(--ink-2); }
+  .content p strong { color: var(--ink); font-weight: 500; }
+
+  .org {
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  }
+  .org h3 { font-size: 26px; font-weight: 600; letter-spacing: -0.02em; }
+  .org .since { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .eyebrow {
+    font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  /* facts strip: quiet numbers, not tiles */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 24px;
+    margin: 6px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .facts div { display: grid; gap: 4px; }
+  .facts dt { font-size: 12.5px; color: var(--muted); line-height: 1.3; }
+  .facts dd {
+    margin: 0;
+    font-size: 24px; font-weight: 500; letter-spacing: -0.02em; line-height: 1;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* row lists: press, before, writing */
+  .rows { display: grid; margin: 0; padding: 0; list-style: none; max-width: 42em; }
+  .rows li {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 4px 20px;
+    padding-block: 14px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .rows li:first-child { border-top: 0; padding-top: 0; }
+  .rows .meta {
+    font-size: 14px; color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    padding-top: 3px;
+  }
+  .rows .title { color: var(--ink); font-weight: 500; }
+  .rows .sub { color: var(--ink-2); margin-top: 3px; }
+  .rows .outlet { color: var(--ink); font-weight: 500; }
+  .rows .headline { color: var(--ink-2); }
+  .rows a.item { display: block; }
+  .rows a.item:hover .title { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: var(--accent); }
+  .rows.press li { grid-template-columns: 184px minmax(0, 1fr); }
+
+  /* placeholder marker for things Olli still has to fill in */
+  .fill {
+    color: var(--ink-2);
+    border-bottom: 1px dashed var(--accent);
+    padding-bottom: 1px;
+    cursor: help;
+  }
+
+  /* contact */
+  .contact .big {
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    max-width: 24em;
+    text-wrap: balance;
+  }
+  .contact .lines { display: grid; gap: 6px; margin-top: 6px; font-size: 16px; }
+  .contact .lines a { color: var(--ink); border-bottom: 1px solid var(--rule); transition: border-color .15s; }
+  .contact .lines a:hover { border-color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+    display: flex; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap;
+    font-size: 13px; color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  footer .facts { max-width: 60ch; }
+  footer .legend { white-space: nowrap; }
+
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; align-items: start; }
+    .hero .portrait { order: -1; max-width: 260px; }
+    section { grid-template-columns: 1fr; gap: 16px; }
+    section > h2 { padding-top: 0; }
+  }
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .rows li, .rows.press li { grid-template-columns: 1fr; gap: 2px; }
+    .rows .meta { padding-top: 0; }
+    .top nav { gap: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+</head>
+<body>
+<div class="page">
+
+  <header class="top">
+    <span class="name">Oliver Wegner</span>
+    <nav aria-label="Sections">
+      <a href="#now">Now</a>
+      <a href="#before">Before</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Oliver Wegner</h1>
+      <p class="role">Founder, product and customer lead. Berlin.</p>
+      <p class="lede">I build products from a blank page and lead the teams that get them into daily use at large companies. Co-founder and CPO of cofenster; before that a crowdsourcing start-up turned agency, and two digital brands for a Hamburg FMCG group.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:olli@cofenster.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/oliver-wegner-b18b89224/" target="_blank" rel="noopener">LinkedIn
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="portrait.jpg" alt="Portrait of Oliver Wegner" width="720" height="991">
+    </figure>
+  </div>
+
+  <section id="now">
+    <h2>Now</h2>
+    <div class="content">
+      <div class="org">
+        <h3>cofenster</h3>
+        <span class="since">2019 to today</span>
+      </div>
+      <p>AI Video Agents for enterprise communications. Comms, HR, and Marketing teams at Continental, Hugo Boss, and Commerzbank use them to produce on-brand video without briefing an agency.</p>
+      <p><strong>Product.</strong> Took the first version from a blank page to enterprise rollout. When the company restructured to profitability and rebuilt itself as AI-native, product carried the transition: three AI Video Agents launched on top of the original platform.</p>
+      <p><strong>Customers.</strong> Ran customer success across around 100 enterprise accounts, onboarding to renewal. The number I manage to is usage, not seats: clients average 10+ videos a month.</p>
+
+      <dl class="facts">
+        <div><dt>Raised</dt><dd>€8M</dd></div>
+        <div><dt>Enterprise accounts</dt><dd>~100</dd></div>
+        <div><dt>Videos per client, per month</dt><dd>10+</dd></div>
+      </dl>
+
+      <p class="eyebrow">In the press</p>
+      <ul class="rows press">
+        <li>
+          <span class="meta">Handelsblatt · 2025</span>
+          <a class="item" href="https://www.handelsblatt.com/unternehmen/start-ups/start-up-check-video-ki-erzeugt-in-sekunden-social-media-posts/100116276.html" target="_blank" rel="noopener">
+            <span class="title">Video-KI erzeugt in Sekunden Social-Media-Posts</span>
+          </a>
+        </li>
+        <li>
+          <span class="meta">deutsche-startups.de · 2025</span>
+          <a class="item" href="https://www.deutsche-startups.de/2025/05/21/wir-sind-kein-startup-das-ki-als-buzzword-missbraucht/" target="_blank" rel="noopener">
+            <span class="title">„Wir sind kein Startup, das KI als Buzzword missbraucht“</span>
+          </a>
+        </li>
+        <li>
+          <span class="meta">EU-Startups · 2022</span>
+          <a class="item" href="https://www.eu-startups.com/2022/02/hamburg-based-cofenster-raises-e8-million-to-bring-video-communication-into-the-corporate-world/" target="_blank" rel="noopener">
+            <span class="title">cofenster raises €8 million to bring video communication into the corporate world</span>
+          </a>
+        </li>
+        <li>
+          <span class="meta">Leuphana Podcast</span>
+          <a class="item" href="https://podcast.leuphana.de/karriere-leupht-als-mitgruender-des-startups-cofenster/" target="_blank" rel="noopener">
+            <span class="title">Vom Bachelor Business Administration zum Mitgründer von cofenster</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="before">
+    <h2>Before</h2>
+    <div class="content">
+      <ul class="rows">
+        <li>
+          <span class="meta">2019</span>
+          <div>
+            <div class="title">Collective Brain</div>
+            <p class="sub">Co-founded a crowdsourcing platform meant to replace the agency model. Clients wanted an agency. We became one, grew it, and sold it.</p>
+          </div>
+        </li>
+        <li>
+          <span class="meta">2010s</span>
+          <div>
+            <div class="title">Hamburg FMCG group</div>
+            <p class="sub">Launched two digital brands for one of Hamburg's large FMCG companies and took it into a market it had never sold in before.</p>
+          </div>
+        </li>
+        <li>
+          <span class="meta">School</span>
+          <div>
+            <div class="title">Fashion labels</div>
+            <p class="sub">Started my own fashion labels while still in school. They failed. It was the cheapest education in margins, suppliers, and my own limits I've had.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="off">
+    <h2>Off the clock</h2>
+    <div class="content">
+      <p>Berlin. Blue belt in Brazilian jiu-jitsu, brown belt in judo. Time with my family, and an ongoing experiment in fermenting.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="content">
+      <p class="big">If you're building something in B2B software and want a second pair of eyes, write me.</p>
+      <div class="lines">
+        <span><a href="mailto:olli@cofenster.com">olli@cofenster.com</a></span>
+        <span><a href="https://www.linkedin.com/in/oliver-wegner-b18b89224/" target="_blank" rel="noopener">LinkedIn</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="facts">Berlin · Co-founder &amp; CPO, cofenster, 2019 to today · B.Sc. Business Administration, Leuphana University, 2017</span>
+    <span class="legend">Last updated September 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
